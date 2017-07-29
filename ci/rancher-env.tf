@@ -4,6 +4,7 @@ module "rancher_env" {
   environment      = "ci"
   bill_code        = "rancher-ci"
   description      = "CI tools and resources"
+  instance_type    = "m4.small"
   vpc_id           = "${data.terraform_remote_state.arsdehnel_shared.vpc_id}"
   r53_zone_id      = "${data.terraform_remote_state.arsdehnel_shared.r53_zone_id}"
   key_name         = "arsdehnel"

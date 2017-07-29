@@ -17,8 +17,8 @@ provider "aws" {
 
 provider "rancher" {
   api_url    = "https://rancher.arsdehnel.ninja"
-  access_key = "A32281872C9981C89218"
-  secret_key = "W8r2kQHm1wbpiFeGpL7EC2eYLt3T1qqi9wRF49BJ"
+  access_key = "${var.rancher_api_access_key}"
+  secret_key = "${var.rancher_api_secret_key}"
 }
 
 variable "rancher_api_access_key" {
